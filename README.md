@@ -1,90 +1,98 @@
-﻿# Project
-Global API Platform - Multi-Region Event-Driven Platform
+﻿secuRAG-13B# Global API Platform
 
-## Objective
-Build a multi-region API platform for the financial/fintech sector that enables:
-- Account and transaction management
+_A next-generation multi-region, event-driven platform for the financial/fintech sector._
+
+---
+
+## 🚀 Objective
+
+Design and deliver a highly-resilient API platform enabling:
+- Account & transaction management
 - Real-time event publishing
 - Intelligent API discovery
 - Semantic observability
-- Hybrid cloud-ready deployment
+- Hybrid cloud-ready deployments
 
-## Project Description
+---
 
-### General architecture
-The platform is composed of the following main components:
+## 🛠️ Architecture Overview
 
-1. API Layer (Contract-First)
-- OpenAPI 3.x to define contracts
-- AsyncAPI for events
-- Semantic versioning
-- API Gateway (Kong or similar)
+The platform is organized into the following core modules:
 
-**APIs:**
-- Accounts API
-- Payments API
-- Transaction Ledger API
-- Event Streaming API
+---
+
+### 1. **API Layer (Contract-First)**
+
+- **OpenAPI 3.x** for HTTP API contracts
+- **AsyncAPI** for asynchronous/event specifications
+- **Semantic versioning** for all APIs
+- **API Gateway:** Kong (or equivalent)
+
+**Primary APIs:**
+- `Accounts API`
+- `Payments API`
+- `Transaction Ledger API`
+- `Event Streaming API`
 
 **Security:**
 - OAuth 2.1
 - JWT validation
-- Internal mTLS between services
+- Internal mTLS (mutual TLS)
 
-2. Event-Driven Core
-**Event backbone:**
-- Apache Kafka for messaging
+---
 
-**Event processing:**
-- accounts.created
-- payments.authorized
-- transactions.settled
-- fraud.detected
+### 2. **Event-Driven Core**
 
-3. Multi-Region Deployment Model
+- **Event Backbone:** Apache Kafka for distributed messaging
+- **Event Types:**
+  - `accounts.created`
+  - `payments.authorized`
+  - `transactions.settled`
+  - `fraud.detected`
 
-**Region simulation:**
-- EU region
-- APAC region
+---
 
-**Deployment patterns:**
-- Active-Active with data replication
-- Kafka replication across regions
-- Automatic failover
-- Intelligent API routing based on geolocation
+### 3. **Multi-Region Deployment Model**
 
-**Infrastructure provisioned with:**
-- Terraform for IaC
+- **Regions Simulated:** EU, APAC
+- **Deployment Patterns:**
+  - Active-Active data replication
+  - Kafka replication across regions
+  - Automatic regional failover
+  - Intelligent API routing (geolocation-aware)
+- **IaC:** Terraform
 
-4. Hybrid Cloud Platform
+---
 
-**Deployment on:**
-- Google Cloud Platform (GCP)
-- Microsoft Azure
+### 4. **Hybrid Cloud Platform**
 
-5. Kubernetes + GitOps
-**Orchestration:**
-- Kubernetes
+- Deploys to:
+  - **Google Cloud Platform (GCP)**
+  - **Microsoft Azure**
 
-**Deployment:**
-- ArgoCD for GitOps
+---
 
-**CI/CD:**
-- GitHub Actions for integration and deployment pipelines
+### 5. **Kubernetes & GitOps**
 
-**Pipelines:**
-- Lint OpenAPI specs
-- Contract testing
-- Build and push Docker images
-- Security scanning
-- Automatic deployment via GitOps
+- **Orchestration:** Kubernetes
+- **GitOps Deployment:** ArgoCD
+- **CI/CD Automation:** GitHub Actions
+  - Lint OpenAPI specs
+  - Contract testing
+  - Docker image build/push
+  - Security scanning
+  - Automated deployment via GitOps
 
-6. AI-Native Observability
-- OpenTelemetry SDK in Java for traceability
-- Distributed tracing with Jaeger
-- RED metrics
-- JSON structured logs
+---
 
-**Alert simulation:**
-- High latency alerts
-- 5xx error alerts
+### 6. **AI-Native Observability**
+
+- **Telemetry:** OpenTelemetry (Java)
+- **Tracing:** Jaeger
+- **Metrics:** RED method
+- **Logging:** JSON structured logs
+- **Alert Simulation:**
+  - High latency
+  - 5xx error rates
+
+---
