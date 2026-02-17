@@ -40,8 +40,6 @@ Design and deliver a highly-resilient API platform enabling:
 
 The platform is organized into the following core modules:
 
----
-
 ### 1. **API Layer (Contract-First)**
 
 - **OpenAPI 3.x** for HTTP API contracts
