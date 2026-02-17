@@ -45,7 +45,7 @@ The platform is organized into the following core modules:
 - **OpenAPI 3.x** for HTTP API contracts
 - **AsyncAPI** for asynchronous/event specifications
 - **Semantic versioning** for all APIs
-- **API Gateway:** Kong (or equivalent)
+- **API Gateway:** Kong
 
 **Primary APIs:**
 - `Accounts API`
