@@ -34,7 +34,17 @@ pids/
 
 # Misc
 .cache/
-temp/
+Yes, the `.gitignore` file itself **should be committed** to your Git repository.
+
+The `.gitignore` file is a configuration file that tells Git which files to ignore. It's important for team collaboration because:
+
+1. **Consistency** - All team members use the same ignore rules
+2. **Shared standards** - Ensures everyone ignores the same files/directories
+3. **No accidental commits** - Prevents sensitive files like `.env` from being committed
+
+**Exception:** Some teams maintain a separate `.gitignore.local` (which is ignored) for personal, machine-specific ignores that shouldn't be shared.
+
+Your current `.gitignore` looks good - it's already set up to ignore environment files, dependencies, IDE settings, and build artifacts. Keep it committed!
 tmp/
 
 # Documentation
