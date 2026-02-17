@@ -1,4 +1,4 @@
-﻿secuRAG-13B# Global API Platform
+﻿# Global API Platform
 
 _A next-generation multi-region, event-driven platform for the financial/fintech sector._
 
