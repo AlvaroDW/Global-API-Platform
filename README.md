@@ -17,6 +17,27 @@ Design and deliver a highly-resilient API platform enabling:
 
 ## 🛠️ Architecture Overview
 
+### High-level architecture diagram:
+```
++-------------------+       +-------------------+       +-------------------+
+|   API Gateway     |       |   Event Backbone   |       |   Observability   |
+|   (Kong)          |       |   (Kafka)         |       |   (OpenTelemetry) |
++-------------------+       +-------------------+       +-------------------+
+        |                       |                       |
+        v                       v                       v
++-------------------+       +-------------------+       +-------------------+
+|   Accounts API    |       |   Payments API    |       |   Transaction     |
+|   Transaction API  |       |   Event Streaming  |       |   Ledger API      |
++-------------------+       +-------------------+       +-------------------+
+        |                       |                       |
+        v                       v                       v
++-------------------+       +-------------------+       +-------------------+
+|   Multi-Region    |       |   Hybrid Cloud     |       |   AI-Native       |
+|   Deployment      |       |   Platform         |       |   Observability   |
++-------------------+       +-------------------+       +-------------------+
+```
+
+
 The platform is organized into the following core modules:
 
 ---
@@ -95,4 +116,55 @@ The platform is organized into the following core modules:
   - High latency
   - 5xx error rates
 
+  Features: 
+  - AI-driven anomaly detection for proactive monitoring
+  - Semantic monitoring (e.g., rejected transactions, fraud patterns)
+
 ---
+
+## API Usage Examples
+
+### Accounts API
+```http
+POST /accounts
+Content-Type: application/json
+
+{
+  "accountHolderName": "John Doe",
+  "accountType": "savings",
+  "initialDeposit": 1000
+}
+```
+
+### Payments API
+```http
+POST /payments
+Content-Type: application/json
+
+{
+  "fromAccountId": "12345",
+  "toAccountId": "67890",
+  "amount": 250,
+  "currency": "USD"
+}
+```
+
+
+---
+### Event Streaming API
+```http
+POST /events
+Content-Type: application/json
+
+{
+  "eventType": "payments.authorized",
+  "payload": {
+    "paymentId": "abc123",
+    "amount": 250,
+    "currency": "USD",
+    "timestamp": "2024-06-01T12:00:00Z"
+  }
+}
+```
+
+
