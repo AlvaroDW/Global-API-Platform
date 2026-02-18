@@ -147,8 +147,6 @@ Content-Type: application/json
 }
 ```
 
-
----
 ### Event Streaming API
 ```http
 POST /events
@@ -164,5 +162,4 @@ Content-Type: application/json
   }
 }
 ```
-
 
